@@ -7,28 +7,28 @@
 }
 
 ::-moz-selection {
-  background-color: $text-color;
-  color: $page-color;
+  background-color: $color-secondary-1-4;
+  color: $color-primary-0;
 }
 ::selection {
-  background-color: $text-color;
-  color: $page-color;
+  background-color: $color-secondary-1-4;
+  color: $color-primary-0;
 }
 
 html {
-  background-color: $accent-color;
+  background-color: $color-secondary-2-1;
 }
 
 body {
   text-align: center;
-  background-color: $page-color;
-  color: mix($text-color, $page-color, 60%);
+  background-color: $color-primary-0;
+  color: mix($color-primary-4, $color-primary-0, 80%);
   font-family: sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.8;
   min-height: 100vh;
-  background-image: url('/images/bg-grid.png');
+  background-color: $color-primary-1;
   @include bp(mid) {
     font-size: 18px;
   }
@@ -39,34 +39,38 @@ body {
   margin-left: auto;
   margin-right: auto;
   width: 90%;
-  text-align: left;
+  text-align: center;
   @include bp(mid) {
     width: 600px;
   }
   @include bp(wide) {
-    width: 700px;
+    width: 1100px;
   }
+}
+
+.align-left {
+  text-align: left;
 }
 
 
 h1, h2, h3 {
-  color: $text-color;
-  font-weight: 600;
+  color: $color-secondary-1-4;
+  font-weight: 400;
   margin-top: 2em;
   margin-bottom:0.2em;
   line-height: 1;
 }
 h1 {
-  font-size: 3em;
+  font-size: 1.5em;
   margin-top:0.4em;
   margin-bottom:0.2em;
   line-height: 1;
 
   @include bp(mid) {
-    font-size: 5em;
+    font-size: 3em;
   }
   @include bp(wide) {
-    font-size: 6em;
+    font-size: 4em;
   }
 }
 
@@ -76,9 +80,9 @@ p {
 }
 
 .subtitle {
-  font-size: 1.2em;
+  font-size: 2em;
   margin-top: 1em;
-  margin-bottom: 5em;
+  margin-bottom: 1em;
 }
 
 ul, ol {
@@ -87,19 +91,19 @@ ul, ol {
 
 a:link,
 a:visited {
-  color: $text-color;
+  color: $color-secondary-1-4;
   text-decoration: none;
-  border-bottom: solid 1px mix($text-color, $page-color, 10%);
+  border-bottom: solid 1px mix($color-primary-4, $color-primary-0, 80%);
 }
 a:hover,
 a:focus {
-  color: $text-color;
-  border-bottom: solid 1px $text-color;
+  color: $color-secondary-2-4;
+  border-bottom: solid 1px $color-secondary-1-4;
 }
 
 
 .nav {
-  padding-top: 3em;
+  padding: 3em;
 
   li {
     display: inline;
@@ -108,36 +112,26 @@ a:focus {
   a:link,
   a:visited {
     display: inline-block;
-    border-top: solid 1px mix($text-color,$page-color, 60%);
-    border-bottom-style: none;
-    padding-top: 0.8em;
-    padding-bottom: 2em;
-    margin-left: 0;
+    margin-left: 0.7em;
     margin-right: 0.7em;
     width: 8em;
-    text-align: left;
-    color: mix($text-color,$page-color, 80%);
+    text-align: center;
+    color: mix($color-secondary-1-4,$color-primary-0, 80%);
     text-decoration: none;
   }
   a:hover,
   a:focus {
-      color: $text-color;
-      border-top: solid 1px $accent-color;
-      border-bottom-style: none;
-  }
-
-  small {
-    display: block;
-    font-size: 0.7em;
-    color: mix($text-color,$page-color, 60%);
+      color: $color-secondary-2-4;
+      background-color: $color-primary-0;
+      border-bottom: solid 1px $color-secondary-2-0;
   }
 }
 
 
 code {
   font-size: 0.8em;
-  background-color:  mix($accent-color, $page-color, 20%);
-  color: $text-color;
+  background-color:  mix($color-secondary-2-0, $color-primary-0, 20%);
+  color: $color-secondary-1-4;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 6px;
@@ -162,8 +156,8 @@ pre {
   padding-left: 2em;
   padding-right: 2em;
   line-height: 1.2;
-  background-color:  mix($accent-color, $page-color, 10%);
-  border: solid 1px mix($accent-color, $page-color, 30%);
+  background-color:  mix($color-secondary-2-0, $color-primary-0, 10%);
+  border: solid 1px mix($color-secondary-2-0, $color-primary-0, 30%);
   overflow: auto;
   code {
     border-style: none;
@@ -176,21 +170,55 @@ pre {
 
 
 footer {
-  margin-top: 6em;
-  padding-top: 4em;
+  margin-top: 1em;
+  padding-top: 1em;
   padding-bottom: 6em;
-  border-top: solid 1px mix($text-color, $page-color, 10%);
-  font-size: 0.7em;
-  color: mix($text-color, $page-color, 40%);
+  border-top: solid 1px mix($color-primary-4, $color-primary-0, 10%);
+  font-size: 1.2em;
+  color: mix($color-primary-4, $color-primary-0, 40%);
 
   a:link,
   a:visited {
-    color: mix($text-color, $page-color, 70%);
-    border-bottom: solid 1px mix($accent-color, $page-color, 70%);
+    color: mix($color-primary-4, $color-primary-0, 70%);
+    border-bottom: solid 1px mix($color-secondary-2-0, $color-primary-0, 70%);
   }
   a:hover,
   a:focus {
-    color: $accent-color;
-    border-bottom: solid 1px $text-color;
+    color: $color-secondary-2-0;
+    border-bottom: solid 1px $color-secondary-1-4;
   }
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */  
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+.submit-btn {
+  background-color: $color-primary-0;
+  color: $color-secondary-1-0;
+  font-weight: 800;
+  font-size: 1.4em;
+  padding: 0.7em;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+.submit-btn:hover {
+  color: $color-secondary-1-0;
+  background-color: $color-primary-2;
+}
+
+/* Add a background color and some padding around the form */
+.contact-container {
+  border-radius: 5px;
+  background-color: $color-secondary-1-1;
+  padding: 20px;
 }

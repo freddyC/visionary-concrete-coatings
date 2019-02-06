@@ -13,5 +13,4 @@ export function handler(event, context, callback) {
     statusCode: 200,
     body: `Hello from the serverless function. Called with these parameters: ${JSON.stringify(params)}`
   });
-
 };

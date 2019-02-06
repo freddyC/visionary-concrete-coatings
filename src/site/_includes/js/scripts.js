@@ -1,1 +1,1 @@
-function btnHandler(e,n){var t=document.querySelector(e);t&&t.addEventListener("click",function(e){e.preventDefault(),n()},!1)}btnHandler(".btn-log",function(){console.log("Oh, hello there!")});
+function btnHandler(n,t){var e=document.querySelector(n);e&&e.addEventListener("click",function(n){n.preventDefault(),t()},!1)}btnHandler(".btn-log",function(){console.log("Oh, hello there!")}),btnHandler(".btn-contact-us",function(){alert("Sorry we are still under construction")});
