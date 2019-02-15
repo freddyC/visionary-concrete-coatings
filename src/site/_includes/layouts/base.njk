@@ -3,29 +3,83 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <style>{% include "css/main.css" %}</style>
     <title>{{ title }}</title>
   </head>
-  <body class="{{ bodyClass }}" >
-    <div class="container">
-      <header>
-        <ul class="nav">
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/about">About Us</a>
-          </li>
-        </ul>
-        {%- if title %}<h1 class="title">{{ title }}</h1>{% endif %}
-        {%- if subtitle %}<p class="subtitle">{{ subtitle }}</p>{% endif %}
-      </header>
-      {{ content | safe }}
+  <body>
+  {# TODO Uncomment this when the about pages is done #}
+    {# <div class="container-fluid">
+      <div class="max-width">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <div class="logo">
+              <img src="images/iqs-img.png"></img>
+            </div>
+            <nav class="bd-links">
+              <a class="btn bd-toc-link" href="/">Home</a>
+              <a class="btn bd-toc-link" href="/about">About Us</a>
+            <nav>
+          </div>
+          <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+            <header>
+              {%- if title %}
+                <h1 class="title">{{ title }}</h1>
+              {% else %}
+                <h1 class="title">Visionary Concrete Coatings</h1>
+              {% endif %}
+            </header>
+            {%- if subtitle %}<p class="subtitle">{{ subtitle }}</p>{% endif %}
+            {{ content | safe }}
+            <script>{% include "js/scripts.js" %}</script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
       {% include "footer.njk" %}
+    </div> #}
+
+
+{# TODO remove this after the about page is done #}
+    <div class="container-fluid">
+      <div class="max-width">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 bd-sidebar">
+            <div class="logo">
+              <img src="images/iqs-img.png"></img>
+            </div>
+          </div>
+          <div class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
+            <header>
+              {%- if title %}
+                <h1 class="title">{{ title }}</h1>
+              {% else %}
+                <h1 class="title">Visionary Concrete Coatings</h1>
+              {% endif %}
+            </header>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="padding-left:5em;padding-right:5em;">
+      {%- if subtitle %}
+        <p class="subtitle">{{ subtitle }}</p>
+      {% endif %}
+      {{ content | safe }}
       <script>{% include "js/scripts.js" %}</script>
     </div>
+
+    <div class="footer">
+      {% include "footer.njk" %}
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
-
-
-

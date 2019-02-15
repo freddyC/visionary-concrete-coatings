@@ -7,45 +7,37 @@
 }
 
 ::-moz-selection {
-  background-color: $color-secondary-1-4;
-  color: $color-primary-0;
+  background-color: $color-primary-1;
+  color: $color-primary-1;
 }
 ::selection {
-  background-color: $color-secondary-1-4;
-  color: $color-primary-0;
+  background-color: $color-primary-1;
+  color: $color-primary-1;
 }
 
 html {
-  background-color: $color-secondary-2-1;
+  background-color: $color-primary-1;
 }
 
 body {
   text-align: center;
-  background-color: $color-primary-0;
-  color: mix($color-primary-4, $color-primary-0, 80%);
-  font-family: sans-serif;
+  background-color: $color-primary-1;
+  color: mix($color-primary-4, $color-primary-1, 80%);
   font-weight: 300;
   font-size: 16px;
   line-height: 1.8;
-  min-height: 100vh;
   background-color: $color-primary-1;
   @include bp(mid) {
     font-size: 18px;
   }
 }
 
+.container-left-side {
+  background-color: $color-primary-4;
+}
 
-.container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  text-align: center;
-  @include bp(mid) {
-    width: 600px;
-  }
-  @include bp(wide) {
-    width: 1100px;
-  }
+.container-right-side {
+  background-color: $color-primary-3;
 }
 
 .align-left {
@@ -60,6 +52,7 @@ h1, h2, h3 {
   margin-bottom:0.2em;
   line-height: 1;
 }
+
 h1 {
   font-size: 1.5em;
   margin-top:0.4em;
@@ -67,10 +60,10 @@ h1 {
   line-height: 1;
 
   @include bp(mid) {
-    font-size: 3em;
+    font-size: 2em;
   }
   @include bp(wide) {
-    font-size: 4em;
+    font-size: 3em;
   }
 }
 
@@ -79,146 +72,83 @@ p {
   margin-bottom: 1em;
 }
 
-.subtitle {
-  font-size: 2em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
 
-ul, ol {
-  padding-left: 1em;
+.subtitle {
+  @include bp(mid) {
+    font-size: 1.4em;
+    margin-top: .75em;
+    margin-bottom: .75em;
+  }
+  @include bp(wide) {
+    font-size: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
 }
 
 a:link,
 a:visited {
+  text-align: center;
   color: $color-secondary-1-4;
   text-decoration: none;
-  border-bottom: solid 1px mix($color-primary-4, $color-primary-0, 80%);
+  border-bottom: solid 1px mix($color-primary-4, $color-primary-1, 80%);
 }
 a:hover,
 a:focus {
-  color: $color-secondary-2-4;
+  color: $color-secondary-1-4;
   border-bottom: solid 1px $color-secondary-1-4;
 }
 
 
-.nav {
-  padding: 3em;
-
-  li {
-    display: inline;
-  }
-
-  a:link,
-  a:visited {
+nav {
+  a:link, a:visited {
     display: inline-block;
-    margin-left: 0.7em;
-    margin-right: 0.7em;
+    margin: 0.7em;
     width: 8em;
-    text-align: center;
-    color: mix($color-secondary-1-4,$color-primary-0, 80%);
-    text-decoration: none;
+    background-color: mix($color-primary-3, $color-primary-1, 80%);
+    border: solid 1px mix($color-primary-3, $color-primary-1, 80%);
   }
-  a:hover,
-  a:focus {
-      color: $color-secondary-2-4;
-      background-color: $color-primary-0;
-      border-bottom: solid 1px $color-secondary-2-0;
+  a:hover, a:focus {
+      background-color: $color-primary-1;
+      border: solid 1px $color-secondary-2-0;
   }
 }
 
-
-code {
-  font-size: 0.8em;
-  background-color:  mix($color-secondary-2-0, $color-primary-0, 20%);
-  color: $color-secondary-1-4;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 6px;
-  padding-right: 6px;
-  white-space: nowrap;
+.card-deck {
+  padding: 3em;
 }
 
-.date {
-  font-size: 0.8em;
-  font-style: italic;
+.logo {
+  padding: 1em;
+  img{
+    width:150px;
+    height:175px;
+  }
 }
 
 main {
-  margin-top: 4em;
-}
-
-pre {
   margin-top: 2em;
-  margin-bottom: 2em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-left: 2em;
-  padding-right: 2em;
-  line-height: 1.2;
-  background-color:  mix($color-secondary-2-0, $color-primary-0, 10%);
-  border: solid 1px mix($color-secondary-2-0, $color-primary-0, 30%);
-  overflow: auto;
-  code {
-    border-style: none;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
-
 
 footer {
-  margin-top: 1em;
-  padding-top: 1em;
-  padding-bottom: 6em;
-  border-top: solid 1px mix($color-primary-4, $color-primary-0, 10%);
-  font-size: 1.2em;
-  color: mix($color-primary-4, $color-primary-0, 40%);
-
-  a:link,
-  a:visited {
-    color: mix($color-primary-4, $color-primary-0, 70%);
-    border-bottom: solid 1px mix($color-secondary-2-0, $color-primary-0, 70%);
+  padding: 1em;
+  border-top-left-radius: 3em;
+  border-top-right-radius: 3em;
+  font-size: 1.5em;
+  font-weight: 500;
+  background-color: $color-secondary-2-1;
+  a:link, a:visited {
+    display: inline-block;
+    margin: 0.7em;
+    width: 9em;
+    background-color: mix($color-primary-3, $color-primary-1, 80%);
+    text-decoration: none;
+    border: solid 1px mix($color-primary-3, $color-primary-1, 80%);
   }
-  a:hover,
-  a:focus {
-    color: $color-secondary-2-0;
-    border-bottom: solid 1px $color-secondary-1-4;
+  a:hover, a:focus {
+      color: white;
+      background-color: $color-primary-1;
+      border: solid 1px $color-secondary-2-0;
   }
 }
 
-/* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */  
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* Style the submit button with a specific background color etc */
-.submit-btn {
-  background-color: $color-primary-0;
-  color: $color-secondary-1-0;
-  font-weight: 800;
-  font-size: 1.4em;
-  padding: 0.7em;
-}
-
-/* When moving the mouse over the submit button, add a darker green color */
-.submit-btn:hover {
-  color: $color-secondary-1-0;
-  background-color: $color-primary-2;
-}
-
-/* Add a background color and some padding around the form */
-.contact-container {
-  border-radius: 5px;
-  background-color: $color-secondary-1-1;
-  padding: 20px;
-}

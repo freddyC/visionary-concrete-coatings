@@ -1,0 +1,5 @@
+{
+  "layout" : "layouts/cards.njk",
+  "tags" : "cards",
+  "templateEngineOverride": "njk,md"
+}
